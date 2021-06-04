@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "darknet.h": "c",
+        "pthread.h": "c"
+    }
+}

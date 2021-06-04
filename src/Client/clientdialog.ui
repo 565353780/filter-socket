@@ -1,0 +1,964 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ClientDialog</class>
+ <widget class="QDialog" name="ClientDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1425</width>
+    <height>717</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <layout class="QHBoxLayout" name="Layout_Solve_Mode" stretch="0,1,0,0,0,0,10">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetDefaultConstraint</enum>
+     </property>
+     <item>
+      <widget class="QLabel" name="label_Solve_Mode">
+       <property name="text">
+        <string>Solve Mode:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="cBox_SolveMode"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_Conda_Env_Name">
+       <property name="text">
+        <string>Conda Env Name:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_Conda_Env_Name"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_Port">
+       <property name="text">
+        <string>Port</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_Port">
+       <property name="text">
+        <string>13141</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,7">
+     <item>
+      <layout class="QVBoxLayout" name="LeftLayout">
+       <item>
+        <widget class="QPlainTextEdit" name="plainTextEdit"/>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="ImgLayout">
+       <item>
+        <widget class="QTabWidget" name="tabWidget">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="tabPosition">
+          <enum>QTabWidget::North</enum>
+         </property>
+         <property name="tabShape">
+          <enum>QTabWidget::Rounded</enum>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <property name="movable">
+          <bool>false</bool>
+         </property>
+         <widget class="QWidget" name="Tab_Mask">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="accessibleName">
+           <string/>
+          </property>
+          <attribute name="title">
+           <string>Mask</string>
+          </attribute>
+          <widget class="QWidget" name="horizontalLayoutWidget_7">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>1131</width>
+             <height>651</height>
+            </rect>
+           </property>
+           <layout class="QHBoxLayout" name="HLayout_MaskMode" stretch="0">
+            <property name="sizeConstraint">
+             <enum>QLayout::SetDefaultConstraint</enum>
+            </property>
+            <item>
+             <widget class="QTabWidget" name="Tab_MaskMode">
+              <property name="currentIndex">
+               <number>0</number>
+              </property>
+              <widget class="QWidget" name="Tab_MaskRect">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <attribute name="title">
+                <string>Rect</string>
+               </attribute>
+               <widget class="QWidget" name="horizontalLayoutWidget">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>1121</width>
+                  <height>621</height>
+                 </rect>
+                </property>
+                <layout class="QHBoxLayout" name="HLayout_mask_rect">
+                 <property name="sizeConstraint">
+                  <enum>QLayout::SetDefaultConstraint</enum>
+                 </property>
+                </layout>
+               </widget>
+              </widget>
+              <widget class="QWidget" name="Tab_MaskPoly">
+               <attribute name="title">
+                <string>Poly</string>
+               </attribute>
+               <widget class="QWidget" name="horizontalLayoutWidget_4">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>1121</width>
+                  <height>611</height>
+                 </rect>
+                </property>
+                <layout class="QHBoxLayout" name="HLayout_mask_poly"/>
+               </widget>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="Tab_DataManage">
+          <attribute name="title">
+           <string>Data Manage</string>
+          </attribute>
+          <widget class="QLabel" name="label_folder_type">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>30</y>
+             <width>66</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Folder Type</string>
+           </property>
+          </widget>
+          <widget class="QProgressBar" name="progressBar_send_obj">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>90</y>
+             <width>151</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="value">
+            <number>0</number>
+           </property>
+          </widget>
+          <widget class="QComboBox" name="cBox_folder_type">
+           <property name="geometry">
+            <rect>
+             <x>110</x>
+             <y>30</y>
+             <width>71</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <item>
+            <property name="text">
+             <string>Dataset</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>OBJ</string>
+            </property>
+           </item>
+          </widget>
+          <widget class="QPushButton" name="SendFolderButton">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>60</y>
+             <width>151</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Send Folder</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="Btn_GetReceivedMessage">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>130</y>
+             <width>151</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Get Files Message</string>
+           </property>
+          </widget>
+          <widget class="QPlainTextEdit" name="plainTextEdit_received_output">
+           <property name="geometry">
+            <rect>
+             <x>220</x>
+             <y>20</y>
+             <width>891</width>
+             <height>191</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="Btn_ClearAll">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>170</y>
+             <width>151</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Clear All</string>
+           </property>
+          </widget>
+          <widget class="QWidget" name="horizontalLayoutWidget_5">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>270</y>
+             <width>1111</width>
+             <height>351</height>
+            </rect>
+           </property>
+           <layout class="QHBoxLayout" name="HLayout_mask_dataset_control"/>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="Tab_Train">
+          <attribute name="title">
+           <string>Train</string>
+          </attribute>
+          <widget class="QPushButton" name="Btn_GetResult">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>560</y>
+             <width>173</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Get Latest Result</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="Btn_StopTrain">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>431</y>
+             <width>173</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Stop Train</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="Btn_Train">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>402</y>
+             <width>173</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Train</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="Btn_Enhancement">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>200</y>
+             <width>171</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Start Enhancement</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_DataEnhancementFactor">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>165</y>
+             <width>121</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Enhancement Factor:</string>
+           </property>
+          </widget>
+          <widget class="QTextEdit" name="textEdit_DataEnhancementFactor">
+           <property name="geometry">
+            <rect>
+             <x>150</x>
+             <y>160</y>
+             <width>51</width>
+             <height>24</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_MaxObjNum">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>65</y>
+             <width>121</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Max OBJ Num / Img :</string>
+           </property>
+          </widget>
+          <widget class="QTextEdit" name="textEdit_MaxObjNum">
+           <property name="geometry">
+            <rect>
+             <x>150</x>
+             <y>60</y>
+             <width>51</width>
+             <height>24</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="Btn_DataChange">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>340</y>
+             <width>171</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Start DataChange</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_CreateDataNum">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>30</y>
+             <width>121</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Create Data Num   :</string>
+           </property>
+          </widget>
+          <widget class="QTextEdit" name="textEdit_CreateDataNum">
+           <property name="geometry">
+            <rect>
+             <x>150</x>
+             <y>30</y>
+             <width>51</width>
+             <height>24</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="Btn_CreateData">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>90</y>
+             <width>171</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Start Create Data</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_LabelNum">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>310</y>
+             <width>121</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Label Num :</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="lineEdit_LabelNum">
+           <property name="geometry">
+            <rect>
+             <x>150</x>
+             <y>305</y>
+             <width>51</width>
+             <height>24</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="lineEdit_TrainPercent">
+           <property name="geometry">
+            <rect>
+             <x>150</x>
+             <y>270</y>
+             <width>51</width>
+             <height>24</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_TrainPercent">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>275</y>
+             <width>121</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Train / Total(%) :</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="Btn_Valid">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>460</y>
+             <width>173</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Valid</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="Btn_SetResult">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>610</y>
+             <width>173</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Set Model Result</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="lineEdit_ReturnResultFolderName">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>530</y>
+             <width>171</width>
+             <height>21</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QProgressBar" name="progressBar_ResultTrans">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>587</y>
+             <width>171</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="value">
+            <number>0</number>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="Tab_Test">
+          <attribute name="title">
+           <string>Test</string>
+          </attribute>
+          <widget class="QLabel" name="label_output_img">
+           <property name="geometry">
+            <rect>
+             <x>670</x>
+             <y>30</y>
+             <width>450</width>
+             <height>450</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Output Image</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="processBtn_darknet">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>130</y>
+             <width>173</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Darknet Process</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="processBtn_lapnet">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>90</y>
+             <width>173</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>LapNet Process</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="OpenImgButton">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>40</y>
+             <width>171</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>OpenImage</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_input_img">
+           <property name="geometry">
+            <rect>
+             <x>210</x>
+             <y>30</y>
+             <width>450</width>
+             <height>450</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Input Image</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="Btn_InitModel">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>260</y>
+             <width>171</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Init Model</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="processBtn_poly_yolo">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>170</y>
+             <width>173</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Poly Yolo Process</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="Btn_DarknetTest">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>420</y>
+             <width>171</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Darknet Test</string>
+           </property>
+          </widget>
+          <widget class="QProgressBar" name="progressBar_SendTestFile">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>490</y>
+             <width>171</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="value">
+            <number>0</number>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="checkBox_LoadNet">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>220</y>
+             <width>71</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Load Net</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_Thresh">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>240</y>
+             <width>51</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Thresh :</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="lineEdit_Thresh">
+           <property name="geometry">
+            <rect>
+             <x>80</x>
+             <y>238</y>
+             <width>41</width>
+             <height>20</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_ImageDir">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>535</y>
+             <width>71</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Image Dir :</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="lineEdit_ImageDir">
+           <property name="geometry">
+            <rect>
+             <x>120</x>
+             <y>530</y>
+             <width>751</width>
+             <height>31</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="lineEdit_OutputDir">
+           <property name="geometry">
+            <rect>
+             <x>120</x>
+             <y>575</y>
+             <width>751</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_ImageDir_2">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>580</y>
+             <width>71</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Image Dir :</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="Btn_SelectImageDir">
+           <property name="geometry">
+            <rect>
+             <x>910</x>
+             <y>530</y>
+             <width>91</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Select</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="Btn_SelectOutputDir">
+           <property name="geometry">
+            <rect>
+             <x>910</x>
+             <y>575</y>
+             <width>91</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Select</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="tab_Camera_Cap">
+          <attribute name="title">
+           <string>Camera Cap</string>
+          </attribute>
+          <widget class="QPushButton" name="Btn_CameraCap">
+           <property name="geometry">
+            <rect>
+             <x>200</x>
+             <y>10</y>
+             <width>320</width>
+             <height>40</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Start Camera Cap</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="Btn_StopCameraCap">
+           <property name="geometry">
+            <rect>
+             <x>610</x>
+             <y>10</y>
+             <width>320</width>
+             <height>40</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Stop Camera Cap</string>
+           </property>
+          </widget>
+          <widget class="QWidget" name="horizontalLayoutWidget_2">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>70</y>
+             <width>1111</width>
+             <height>561</height>
+            </rect>
+           </property>
+           <layout class="QHBoxLayout" name="HLayout_people_detect_img"/>
+          </widget>
+          <widget class="QCheckBox" name="checkBox_ShowMask">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>20</y>
+             <width>91</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Show Mask</string>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="checkBox_SaveCap">
+           <property name="geometry">
+            <rect>
+             <x>1020</x>
+             <y>20</y>
+             <width>91</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Save Cap</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="tab_Camera_Pose_Initialization">
+          <attribute name="title">
+           <string>Camera Pose Initialization</string>
+          </attribute>
+          <widget class="QWidget" name="horizontalLayoutWidget_3">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>40</y>
+             <width>1111</width>
+             <height>591</height>
+            </rect>
+           </property>
+           <layout class="QHBoxLayout" name="HLayout_camera_mask"/>
+          </widget>
+          <widget class="QCheckBox" name="checkBox_ChoosePointPair">
+           <property name="geometry">
+            <rect>
+             <x>530</x>
+             <y>10</y>
+             <width>121</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Choose Point Pair</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="Btn_GetCameraFrame">
+           <property name="geometry">
+            <rect>
+             <x>300</x>
+             <y>10</y>
+             <width>141</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Get Camera Frame</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="Btn_InitCamera">
+           <property name="geometry">
+            <rect>
+             <x>730</x>
+             <y>10</y>
+             <width>131</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Init Camera</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_DetectDensity">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>10</y>
+             <width>121</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>detect density:</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="lineEdit_DetectDensity">
+           <property name="geometry">
+            <rect>
+             <x>140</x>
+             <y>10</y>
+             <width>41</width>
+             <height>21</height>
+            </rect>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="tab_DataManager">
+          <attribute name="title">
+           <string>Data Manager</string>
+          </attribute>
+          <widget class="QWidget" name="horizontalLayoutWidget_6">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>10</y>
+             <width>1111</width>
+             <height>621</height>
+            </rect>
+           </property>
+           <layout class="QHBoxLayout" name="HLayout_DataManager"/>
+          </widget>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

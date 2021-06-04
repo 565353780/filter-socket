@@ -1,0 +1,80 @@
+{
+	"Functions":{
+		"type":"select",
+		"category":"首选项",
+		"options": [
+					["Congestion","车道拥堵监测"],
+					["Illegal_parking","违章停车监测"],
+					["Retrograde_motion","逆行检测"],
+					["Obstacle","障碍物检测"],
+					["Pedestrian","行人检测"]
+				],
+		"values": [],
+		"checkbox":"TRUE",
+        "ui_name": "功能"
+	},
+	"MaskNum":{
+		"type":"int",
+		"category":"首选项",
+		"value": 0,
+		"min_value": 0,
+		"max_value": 15,
+        "ui_name": "车道数量"
+	},
+    "Mask": {
+        "category": "",
+        "color": {
+            "b": 0,
+            "g": 0,
+            "r": 255
+        },
+        "polygon": [
+        ],
+        "type": "polygon",
+        "ui_name": "区域设置"
+    },
+	"Masks": {
+        "category": "",
+        "color": {
+            "b": 255,
+            "g": 0,
+            "r": 0
+        },
+		"color1": {
+            "b": 0,
+            "g": 255,
+            "r": 255
+        },
+		
+        "polygons": [
+        ],
+		"labels": [
+		],
+		"labelDict":[			
+			{
+				"name": "roadway",
+				"ui_name": "车道类别",
+				"options": [
+					["L","左转道"],
+					["R","右转道"],
+					["S","直行道"],
+					["LS","直行&左转道"],
+					["RS","直行&右转道"]
+				],
+				"default":"L"
+			},
+			{
+				"name": "other",
+				"ui_name": "其他",
+				"options": [
+					["T","真"],
+					["F","假"]
+				],			
+				"default":"T"
+			}
+			
+		],
+		"type": "polygons",
+		"ui_name": "车道设置"
+	}
+}

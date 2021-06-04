@@ -1,0 +1,11 @@
+./darknet detector train cfg/coco.data cfg/yolov3.cfg pretrained_weights/darknet53.conv.74
+
+./darknet detector train cfg/coco.data cfg/yolov3.cfg backup/yolov3.backup
+
+./darknet detector demo cfg/coco.data cfg/yolov3.cfg backup/yolov3.backup videos/cm.mp4
+
+./darknet detector test cfg/coco.data cfg/yolov3.cfg backup/yolov3.backup sources/1.jpg
+
+./darknet detector test cfg/coco.data cfg/yolov3.cfg backup/yolov3.weights sources/1.jpg
+
+./darknet detector demo cfg/coco.data cfg/yolov3.cfg pretrained_weights/yolov3.weights http://192.168.0.203:8085/stream.mjpg

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MaskDatasetControlWidget</class>
+ <widget class="QWidget" name="MaskDatasetControlWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1118</width>
+    <height>271</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QTextEdit" name="textEdit_target_dataset_size">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>110</y>
+     <width>171</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_target_dataset_path">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>65</y>
+     <width>171</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Target Dataset Path :</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Btn_Source_Dataset_Path">
+   <property name="geometry">
+    <rect>
+     <x>950</x>
+     <y>10</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Browse</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="textEdit_target_dataset_path">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>60</y>
+     <width>721</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="textEdit_workers_num">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>160</y>
+     <width>171</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Btn_Recycle_Mask">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>110</y>
+     <width>181</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Recycle Mask</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_workers_num">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>165</y>
+     <width>171</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Workers Num :</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Btn_Create_Work_Station">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>160</y>
+     <width>161</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Create Work Station</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_source_dataset_path">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>15</y>
+     <width>171</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Source Dataset Path :</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Btn_Target_Dataset_Path">
+   <property name="geometry">
+    <rect>
+     <x>950</x>
+     <y>60</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Browse</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_target_dataset_size">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>115</y>
+     <width>171</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Target Dataset Size :</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="textEdit_source_dataset_path">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>10</y>
+     <width>721</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPlainTextEdit" name="plainTextEdit_msg">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>200</y>
+     <width>1081</width>
+     <height>61</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Btn_Create_Train_Dataset">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>160</y>
+     <width>181</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Create Train Dataset</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Btn_Init_Param">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>110</y>
+     <width>161</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Init Param</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Btn_Create_Valid_Dataset">
+   <property name="geometry">
+    <rect>
+     <x>780</x>
+     <y>110</y>
+     <width>181</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Create Valid Dataset</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Btn_Recycle_Valid">
+   <property name="geometry">
+    <rect>
+     <x>890</x>
+     <y>160</y>
+     <width>181</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Recycle Valid</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

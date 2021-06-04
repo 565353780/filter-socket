@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DataManagerWidget</class>
+ <widget class="QWidget" name="DataManagerWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1072</width>
+    <height>629</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QPushButton" name="Btn_OpenDir">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>10</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Open Dir</string>
+   </property>
+  </widget>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>40</y>
+     <width>981</width>
+     <height>371</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="tab_SourceImage">
+    <attribute name="title">
+     <string>SourceImage</string>
+    </attribute>
+    <widget class="QTableView" name="tableView_SourceImage">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>960</width>
+       <height>330</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_Mask">
+    <attribute name="title">
+     <string>Mask</string>
+    </attribute>
+    <widget class="QTabWidget" name="tabWidget_Mask">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>971</width>
+       <height>341</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tab_Yolov3Region">
+      <attribute name="title">
+       <string>Yolov3Region</string>
+      </attribute>
+      <widget class="QTableView" name="tableView_Yolov3RegionMask">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>960</width>
+         <height>300</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_Yolov3Component">
+      <attribute name="title">
+       <string>Yolov3Component</string>
+      </attribute>
+      <widget class="QTableView" name="tableView_Yolov3ComponentMask">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>960</width>
+         <height>300</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_ResNetClassification">
+      <attribute name="title">
+       <string>ResNetClassification</string>
+      </attribute>
+      <widget class="QTableView" name="tableView_ResNetClassificationMask">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>960</width>
+         <height>300</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_Predict">
+    <attribute name="title">
+     <string>Predict</string>
+    </attribute>
+    <widget class="QTabWidget" name="tabWidget_Predict">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>971</width>
+       <height>341</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tab_Yolov3Region">
+      <attribute name="title">
+       <string>Yolov3Region</string>
+      </attribute>
+      <widget class="QTableView" name="tableView_Yolov3RegionPredict">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>960</width>
+         <height>300</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_Yolov3Component">
+      <attribute name="title">
+       <string>Yolov3Component</string>
+      </attribute>
+      <widget class="QTableView" name="tableView_Yolov3ComponentPredict">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>960</width>
+         <height>300</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_ResNetClassification">
+      <attribute name="title">
+       <string>ResNetClassification</string>
+      </attribute>
+      <widget class="QTableView" name="tableView_ResNetClassificationPredict">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>960</width>
+         <height>300</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QProgressBar" name="progressBar">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>10</y>
+     <width>551</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="value">
+    <number>0</number>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Btn_Create_Work_Station">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>540</y>
+     <width>161</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Create Work Station</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="textEdit_target_dataset_size">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>500</y>
+     <width>171</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_workers_num">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>545</y>
+     <width>171</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Workers Num :</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="textEdit_source_dataset_path">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>420</y>
+     <width>821</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_target_dataset_size">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>505</y>
+     <width>171</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Target Dataset Size :</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Btn_Recycle_Mask">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>500</y>
+     <width>181</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Recycle Mask</string>
+   </property>
+  </widget>
+  <widget class="QPlainTextEdit" name="plainTextEdit_msg">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>580</y>
+     <width>971</width>
+     <height>41</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_target_dataset_path">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>465</y>
+     <width>171</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Target Dataset Path :</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="textEdit_target_dataset_path">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>460</y>
+     <width>821</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Btn_Recycle_Valid">
+   <property name="geometry">
+    <rect>
+     <x>790</x>
+     <y>540</y>
+     <width>181</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Recycle Valid</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Btn_Create_Valid_Dataset">
+   <property name="geometry">
+    <rect>
+     <x>700</x>
+     <y>500</y>
+     <width>181</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Create Valid Dataset</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_source_dataset_path">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>425</y>
+     <width>171</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Source Dataset Path :</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Btn_Init_Param">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>500</y>
+     <width>161</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Init Param</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="textEdit_workers_num">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>540</y>
+     <width>171</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Btn_Create_Train_Dataset">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>540</y>
+     <width>181</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Create Train Dataset</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="cBox_MaskMode">
+   <property name="geometry">
+    <rect>
+     <x>843</x>
+     <y>13</y>
+     <width>141</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>Yolov3Region</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Yolov3Component</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>ResNetClassification</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="label_Mask_Mode">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>13</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Mask Mode:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_QueryMaskAndPredict">
+   <property name="geometry">
+    <rect>
+     <x>990</x>
+     <y>80</y>
+     <width>71</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Row Index :</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_QueryMaskAndPredict">
+   <property name="geometry">
+    <rect>
+     <x>990</x>
+     <y>100</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Btn_QueryMaskAndPredict">
+   <property name="geometry">
+    <rect>
+     <x>990</x>
+     <y>130</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Query</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_InsertFolder">
+   <property name="geometry">
+    <rect>
+     <x>990</x>
+     <y>170</y>
+     <width>61</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>insert :</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Btn_InsertFolder">
+   <property name="geometry">
+    <rect>
+     <x>990</x>
+     <y>190</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Select</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBox_ConnectMask">
+   <property name="geometry">
+    <rect>
+     <x>990</x>
+     <y>230</y>
+     <width>71</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>connect</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_LoadFileNumForEachFolder">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>61</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>load num :</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_LoadFileNumForEachFolder">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>10</y>
+     <width>41</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

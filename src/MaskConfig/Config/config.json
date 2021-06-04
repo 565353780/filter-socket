@@ -1,0 +1,38 @@
+{
+    "Area": {
+        "category": "",
+        "color": {
+            "b": 255,
+            "g": 50,
+            "r": 0
+        },
+    "color1": {
+            "b": 0,
+            "g": 255,
+            "r": 255
+        },
+    "labels": [
+    ],
+    "labelDict":[
+      {
+        "name": "feature",
+        "ui_name": "顾客或店员",
+        "options": [
+          ["1","店员"],
+                ["2", "顾客"]
+        ],
+        "default":"1"
+      }
+    ],
+        "polygons": [
+        ],
+        "type": "bbox",
+        "ui_name": "顾客跟踪"
+    },
+    "camera_id":{
+        "type":"text",
+        "category":"Camera",
+        "value": "",
+        "ui_name": "摄像头编号"
+    } 
+}

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MaskPolyWidget</class>
+ <widget class="QWidget" name="MaskPolyWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QPushButton" name="Btn_PreImg">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>10</y>
+     <width>101</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Pre img</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Btn_NextImg">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>10</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Next img</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Btn_OpenDir">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Open dir</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Btn_EditLabel">
+   <property name="geometry">
+    <rect>
+     <x>880</x>
+     <y>10</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Edit label</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_CurrentLabel">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>60</y>
+     <width>51</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Label:</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="cBox_Label">
+   <property name="geometry">
+    <rect>
+     <x>830</x>
+     <y>58</y>
+     <width>141</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QWidget" name="horizontalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>50</y>
+     <width>731</width>
+     <height>521</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="HLayout_mask_poly_img"/>
+  </widget>
+  <widget class="QTextEdit" name="textEdit_LabelInput">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>10</y>
+     <width>441</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_LabelInput">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>20</y>
+     <width>91</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Label input:</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>760</x>
+     <y>90</y>
+     <width>211</width>
+     <height>481</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="VLayout_Label_Btns"/>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
