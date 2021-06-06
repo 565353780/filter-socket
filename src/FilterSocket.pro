@@ -3,7 +3,7 @@ TEMPLATE = subdirs
 SUBDIRS += \
     Q3D \
     Client \
-    #Server \
+    Server \
     Server_Protector \
     MaskConfig \
     ModelMaker \

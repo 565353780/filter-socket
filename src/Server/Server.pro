@@ -289,7 +289,7 @@ CUDA_DIR = "/usr/local/cuda-11.1" # Path to cuda toolkit install
 
 SYSTEM_NAME = ubuntu         # Depending on your system either 'Win32', 'x64', or 'Win64'
 SYSTEM_TYPE = 64            # '32' or '64', depending on your system
-CUDA_ARCH = sm_50           # Type of CUDA architecture, for example 'compute_10', 'compute_11', 'sm_10'
+CUDA_ARCH = sm_86           # Type of CUDA architecture, for example 'compute_10', 'compute_11', 'sm_10'
 NVCC_OPTIONS = --use_fast_math
 
 # include paths
@@ -309,7 +309,7 @@ CUDA_LIBS += -lcudart -lcufft -lcuda -lcublas -lcurand -lcudnn
 CUDA_INC = $$join(INCLUDEPATH,'" -I"','-I"','"')
 #LIBS += $$join(CUDA_LIBS,'.so ', '', '.so')
 LIBS += \
-    -L/usr/local/cuda-10.0/lib64 \
+    -L/usr/local/cuda-11.1/lib64 \
     $$CUDA_LIBS
 
 # Configuration of the Cuda compiler

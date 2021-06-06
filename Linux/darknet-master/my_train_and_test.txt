@@ -9,3 +9,7 @@
 ./darknet detector test cfg/coco.data cfg/yolov3.cfg backup/yolov3.weights sources/1.jpg
 
 ./darknet detector demo cfg/coco.data cfg/yolov3.cfg pretrained_weights/yolov3.weights http://192.168.0.203:8085/stream.mjpg
+
+/home/chli/github/filter-socket/Linux/darknet-master/darknet detector train /home/chli/github/filter-socket/Server_DataBase/train_dataset/darknet_dataset/coco.data /home/chli/github/filter-socket/Server_DataBase/train_dataset/darknet_dataset/yolov3_train.cfg /home/chli/github/filter-socket/pretrained_weights/darknet53.conv.74
+
+/home/chli/github/filter-socket/Linux/darknet-master/darknet detector train /home/chli/github/filter-socket/Server_DataBase/train_dataset/darknet_dataset/coco.data /home/chli/github/filter-socket/Server_DataBase/train_dataset/darknet_dataset/yolov3_train.cfg /home/chli/github/filter-socket/Linux/darknet-master/backup/yolov3_train.backup

@@ -1316,6 +1316,7 @@ bool DataRebuild::train(QString conda_env_name, QString train_mode)
 #endif
 #ifdef Linux
         system(("RUN_AFTER_BASHRC=\"conda activate " + conda_env_name + "&&" + current_path + "/../Linux/darknet-master/darknet detector " + train_mode + " " + coco_data_string + " " + yolov3_cfg_string + " " + weights_string + "&&exit\" gnome-terminal").toStdString().c_str());
+        std::cout << (current_path + "/../Linux/darknet-master/darknet detector " + train_mode + " " + coco_data_string + " " + yolov3_cfg_string + " " + weights_string + "&&exit\" gnome-terminal").toStdString() << std::endl;
 #endif
     }
     else

@@ -6,7 +6,6 @@
 #include <pthread.h>
 
 #ifdef GPU
-extern "C++" {
     #define BLOCK 512
 
     #include "cuda_runtime.h"
@@ -16,7 +15,6 @@ extern "C++" {
     #ifdef CUDNN
     #include "cudnn.h"
     #endif
-}
 #endif
 
 #ifdef __cplusplus

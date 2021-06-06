@@ -248,9 +248,9 @@ void ClientDialog::on_ConnectServerBtn_clicked()
     if(socket_->state() == QAbstractSocket::UnconnectedState)
     {
         qDebug()<<port;
-        //socket_->connectToHost("127.0.0.1",port);
+        socket_->connectToHost("127.0.0.1",port);
         //socket_->connectToHost("117.71.55.48",port);
-        socket_->connectToHost("192.168.0.9",port);
+        //socket_->connectToHost("192.168.0.9",port);
     }
 }
 
